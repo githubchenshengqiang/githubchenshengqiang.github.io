@@ -326,15 +326,13 @@
 <li>登录自己的github，并打开刚才创建的repository</li>
 <li>复制ssh地址</li>
 <li>打开刚开始创建的文件夹hexo，编辑_config.yml文件</li>
-<li>做如下修改：</li>
-</ul>
-<p><img src="images/repository.png" alt="repository" title="repository"></p>
-<ul>
+<li>做如下修改：<br><img src="images/repository.png" alt="repository" title="repository"></li>
 <li>在hexo文件夹下执行hexo g -d，登录我们自己的部署在Github Pages服务器上的博客了</li>
 <li>假如这时候，报错 ERROR Deployer not found: git，那么就是你的deployer没有安装成功，你需要执行如下命令再安装一次：npm install hexo-deployer-git –save</li>
-<li>按上述步骤操作后，即可访问你的博客了</li>
+<li>按上述步骤操作后，即可访问你的博客了<br>美化自己的博客</li>
 </ul>
-<h2 id="美化自己的博客"><a href="#美化自己的博客" class="headerlink" title="美化自己的博客"></a>美化自己的博客</h2><ul>
+<hr>
+<ul>
 <li><p>可以百度搜索hexo主题，找到git地址后，直接在hexo文件夹下的themes文件夹下 git base here 来clone主题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next(此处地址替换成你需要使用的主题的地址)</span><br></pre></td></tr></table></figure>
 </li>
@@ -351,19 +349,25 @@
 </ul>
 <p>打开个人主页，即可看到修改后的效果</p>
 <h2 id="撰写自己的第一篇博客"><a href="#撰写自己的第一篇博客" class="headerlink" title="撰写自己的第一篇博客"></a>撰写自己的第一篇博客</h2><ul>
-<li>打开hexo文件夹，右键 git base here，输入 hexo n “你的标题”，对应在source/_posts文件夹下生成与标题对应的.md文件</li>
-<li>在此文件中书写个人博客</li>
-<li>写完之后在hexo文件夹下 git base here，输入命令：<figure class="highlight plain"><figcaption><span>d -g```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">* 访问自己的博客主页，刚刚撰写的博客就映入眼帘</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">遇到的问题</span><br><span class="line">--------</span><br><span class="line">* ssh -T git@github.com测试git是否配置成功时，出现 GitHub does not provide shell access</span><br><span class="line">解决办法：在.ssh文件夹下新建config文件，并如下编辑即可：</span><br></pre></td></tr></table></figure>
-
+<li><p>打开hexo文件夹，右键 git base here，输入 hexo n “你的标题”，对应在source/_posts文件夹下生成与标题对应的.md文件</p>
+</li>
+<li><p>在此文件中书写个人博客</p>
+</li>
+<li><p>写完之后在hexo文件夹下 git base here，输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>访问自己的博客主页，刚刚撰写的博客就映入眼帘<br>遇到的问题</p>
 </li>
 </ul>
-<p>Host github.com<br>User git<br>Hostname ssh.github.com<br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port 443</p>
-<pre><code>* 分享一个玄学（也有可能是笔者nc）
+<hr>
+<ul>
+<li><p>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>测试git是否配置成功时，出现 GitHub does not provide shell access<br>解决办法：在.ssh文件夹下新建config文件，并如下编辑即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User git</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分享一个玄学（也有可能是笔者nc）<br><img src="images/config.png" alt="config" title="config"><br>在github上repository的settings中，配置repository name为自己的github账号名称+.github.io，否则会出现某些样式文件等找不到的问题</p>
+</li>
+</ul>
 
-![config](images/config.png &quot;config&quot;)
-
-在github上repository的settings中，配置repository name为自己的github账号名称+.github.io，否则会出现某些样式文件等找不到的问题
-</code></pre>
           
         
       

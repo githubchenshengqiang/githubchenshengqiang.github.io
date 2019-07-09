@@ -347,16 +347,16 @@
 </li>
 </ul>
 <p>打开个人主页，即可看到修改后的效果</p>
-<h1 id="撰写自己的第一篇博客"><a href="#撰写自己的第一篇博客" class="headerlink" title="撰写自己的第一篇博客"></a>撰写自己的第一篇博客</h1><ul>
+<h2 id="撰写自己的第一篇博客"><a href="#撰写自己的第一篇博客" class="headerlink" title="撰写自己的第一篇博客"></a>撰写自己的第一篇博客</h2><ul>
 <li>打开hexo文件夹，右键 git base here，输入 hexo n “你的标题”，对应在source/_posts文件夹下生成与标题对应的.md文件</li>
 <li>在此文件中书写个人博客</li>
-<li>写完之后在hexo文件夹下 git base here，输入命令<figure class="highlight plain"><figcaption><span>d -g```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 访问自己的博客主页，刚刚撰写的博客就映入眼帘</span><br><span class="line"></span><br><span class="line"># 遇到的问题</span><br><span class="line">**ssh -T git@github.com测试git是否配置成功时，出现 GitHub does not provide shell access**</span><br><span class="line">解决办法：在.ssh文件夹下新建config文件，并如下编辑即可</span><br></pre></td></tr></table></figure></li>
+<li>写完之后在hexo文件夹下 git base here，输入命令<figure class="highlight plain"><figcaption><span>d -g```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 访问自己的博客主页，刚刚撰写的博客就映入眼帘</span><br><span class="line"></span><br><span class="line">遇到的问题</span><br><span class="line">--------</span><br><span class="line">**ssh -T git@github.com测试git是否配置成功时，出现 GitHub does not provide shell access**</span><br><span class="line">解决办法：在.ssh文件夹下新建config文件，并如下编辑即可</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>Host github.com<br>User git<br>Hostname ssh.github.com<br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port 443</p>
 <pre><code>**分享一个玄学（也有可能是笔者nc）**
-![配置](images/config.png &quot;config&quot;)
+![config](images/config.png &quot;config&quot;)
 
-在github上repository的settings中，配置repository name为自己的github账号+.github.io，否则会出现某些样式文件等找不到的问题
+在github上repository的settings中，配置repository name为自己的github账号名称+.github.io，否则会出现某些样式文件等找不到的问题
 </code></pre>
           
         

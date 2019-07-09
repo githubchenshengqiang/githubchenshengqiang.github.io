@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Hexo 搭建个人博客安装node.jswindows下安装node.js，官方网站下载，并无脑next 安装gitwindows下安装git，官方网站下载，一样无脑next安装完成后，右键鼠标会出现下图所示内容：">
+<meta name="description" content="Hexo 搭建个人博客安装node.jswindows下安装node.js，官方网站下载，并无脑next 安装gitwindows下安装git，官方网站下载，一样无脑next安装完成后，右键鼠标会出现下图所示内容：将git配置好之后（这里默认读者已经配置好） 安装Hexo 桌面右键鼠标，点击Git Bash Here，输入npm命令即可安装 12npm install hexo-cli -g  /">
 <meta name="keywords" content="小白搭建博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Hexo搭建个人博客">
 <meta property="og:url" content="http://yoursite.com/2019/07/09/用Hexo搭建个人博客/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Hexo 搭建个人博客安装node.jswindows下安装node.js，官方网站下载，并无脑next 安装gitwindows下安装git，官方网站下载，一样无脑next安装完成后，右键鼠标会出现下图所示内容：">
+<meta property="og:description" content="Hexo 搭建个人博客安装node.jswindows下安装node.js，官方网站下载，并无脑next 安装gitwindows下安装git，官方网站下载，一样无脑next安装完成后，右键鼠标会出现下图所示内容：将git配置好之后（这里默认读者已经配置好） 安装Hexo 桌面右键鼠标，点击Git Bash Here，输入npm命令即可安装 12npm install hexo-cli -g  /">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-09T08:11:02.654Z">
+<meta property="og:updated_time" content="2019-07-09T09:15:57.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Hexo搭建个人博客">
-<meta name="twitter:description" content="Hexo 搭建个人博客安装node.jswindows下安装node.js，官方网站下载，并无脑next 安装gitwindows下安装git，官方网站下载，一样无脑next安装完成后，右键鼠标会出现下图所示内容：">
+<meta name="twitter:description" content="Hexo 搭建个人博客安装node.jswindows下安装node.js，官方网站下载，并无脑next 安装gitwindows下安装git，官方网站下载，一样无脑next安装完成后，右键鼠标会出现下图所示内容：将git配置好之后（这里默认读者已经配置好） 安装Hexo 桌面右键鼠标，点击Git Bash Here，输入npm命令即可安装 12npm install hexo-cli -g  /">
 
 
 
@@ -301,7 +301,63 @@
 
       
         <h1 id="Hexo-搭建个人博客"><a href="#Hexo-搭建个人博客" class="headerlink" title="Hexo 搭建个人博客"></a>Hexo 搭建个人博客</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>windows下安装node.js，<a href="https://nodejs.org/en/download/" title="node.js" target="_blank" rel="noopener">官方网站</a>下载，并无脑next</p>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>windows下安装git，<a href="https://git-scm.com/download/win" title="git" target="_blank" rel="noopener">官方网站</a>下载，一样无脑next<br>安装完成后，右键鼠标会出现下图所示内容：</p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>windows下安装git，<a href="https://git-scm.com/download/win" title="git" target="_blank" rel="noopener">官方网站</a>下载，一样无脑next<br>安装完成后，右键鼠标会出现下图所示内容：<br>将git配置好之后（这里默认读者已经配置好）</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ul>
+<li><p>桌面右键鼠标，点击Git Bash Here，输入npm命令即可安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g  //安装hexo</span><br><span class="line">npm install hexo-deployer-git --save  //安装hexo部署到git page的deployer</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化配置</p>
+<blockquote>
+<p>根据喜好创建文件夹（例如hexo），并在文件夹下右键 git base here</p>
+</blockquote>
+<p>  hexo init</p>
+<blockquote>
+<p>本地查看效果</p>
+</blockquote>
+<p>  hexo generate<br>  hexo server</p>
+<blockquote>
+<p>打开浏览器，在地址栏输入 localhost:4000 查看效果</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="将博客部署到github上"><a href="#将博客部署到github上" class="headerlink" title="将博客部署到github上"></a>将博客部署到github上</h2><ul>
+<li><p>登录自己的github，并打开刚才创建的repository</p>
+</li>
+<li><p>复制ssh地址</p>
+</li>
+<li><p>打开刚开始创建的文件夹hexo，编辑_config.yml文件</p>
+</li>
+<li><p>做如下修改：</p>
+</li>
+<li><p>在hexo文件夹下执行hexo g -d，登录我们自己的部署在Github Pages服务器上的博客了</p>
+</li>
+<li><p>假如这时候，报错 ERROR Deployer not found: git，那么就是你的deployer没有安装成功，你需要执行如下命令再安装一次：npm install hexo-deployer-git –save</p>
+</li>
+<li><p>按上述步骤操作后，即可访问你的博客了</p>
+</li>
+</ul>
+<h2 id="美化自己的博客"><a href="#美化自己的博客" class="headerlink" title="美化自己的博客"></a>美化自己的博客</h2><ul>
+<li><p>可以百度搜索hexo主题，找到git地址后，直接在hexo文件夹下的themes文件夹下 git base here 来clone主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next(此处地址替换成你需要使用的主题的地址)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改hexo文件夹下的配置文件_config.yml，将theme参数为对应clone的主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改参数为：theme: hexo-theme-next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署主题，本地查看效果，执行完一下命令后在浏览器输入localhost:4000</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果对主题满意，那么可以将其部署到github<br>打开hexo文件夹，右键git base here</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean（清理缓存）</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>打开个人主页，即可看到修改后的效果</p>
+<h1 id="撰写自己的第一篇博客"><a href="#撰写自己的第一篇博客" class="headerlink" title="撰写自己的第一篇博客"></a>撰写自己的第一篇博客</h1><ul>
+<li>打开hexo文件夹，右键 git base here，输入 hexo n “你的标题”，对应在source/_posts文件夹下生成与标题对应的.md文件</li>
+<li>在此文件中书写个人博客</li>
+<li>写完之后在hexo文件夹下 git base here，输入命令<code>hexo d -g</code></li>
+<li>访问自己的博客主页，刚刚撰写的博客就映入眼帘</li>
+</ul>
 
       
     </div>
@@ -447,7 +503,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-搭建个人博客"><span class="nav-number">1.</span> <span class="nav-text">Hexo 搭建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-js"><span class="nav-number">1.1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.</span> <span class="nav-text">安装git</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-搭建个人博客"><span class="nav-number">1.</span> <span class="nav-text">Hexo 搭建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-js"><span class="nav-number">1.1.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将博客部署到github上"><span class="nav-number">1.4.</span> <span class="nav-text">将博客部署到github上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美化自己的博客"><span class="nav-number">1.5.</span> <span class="nav-text">美化自己的博客</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#撰写自己的第一篇博客"><span class="nav-number">2.</span> <span class="nav-text">撰写自己的第一篇博客</span></a></li></ol></div>
             
 
           </div>
